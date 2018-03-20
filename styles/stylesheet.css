@@ -1,0 +1,13 @@
+h1 {
+  color: skyblue;
+  background-color: mediumblue;
+  border: 1px solid black;
+}
+
+p {
+  color: skyblue;
+}
+
+#hiddenbutton:hover {
+  color: blue;
+}
