@@ -8,29 +8,34 @@
   <body>
     <img src="images/rsi-logo-trans-300.png" alt="My test image">
     <h1>RSI Ticket Tracker</h1>
-    <h2>Ticket Log</h2>
-    <h2>New Ticket Info</h2>
-    <div  background-color="white" id="hiddenbutton"> found me!</div>
+    <!--<h2>Ticket Log</h2>
+    <h2>New Ticket Info</h2> -->
     <table>
       <caption>Ticket Information required</caption>
       <colgroup>
         <col width="160px">
-        <col style="background-color: skyblue" width="160px">
+        <col width="160px">
       </colgroup>
       <tr>
+        <td>First Name: </td> <td><input type="text" id="firstField" class="firstField"></td>
+      </tr>
+      <tr>
+        <td>Last Name: </td> <td><input type="text" id="lastField" class="lastField"></td>
+      </tr>
+      <tr>
+        <td>Username: </td> <td><input type="text" id="userField" class="userField"></td>
+      </tr>
+      <tr>
+        <td>Email(RSi): </td> <td><input type="text" id="emailField" class="emailField"></td>
+      </tr>
+      <tr>
+        <td>Department: </td> <td><input type="text" id="deptField" class="deptField"></td>
+      </tr>
+      <tr>
+        <td>ext.: </td> <td><input type="number" id="extField" class="extField"></td>
+      </tr>
 
-        <td>First Name: </td>
-        <td>Last Name: </td>
-      </tr>
-      <tr>
-        <td>Username: </td>
-        <td>Email(RSi): </td>
-      </tr>
-      <tr>
-        <td>Department: </td>
-        <td>ext.: </td>
-      </tr>
-      <th>Category: </th>
+      <!--<th>Category: </th>
         <tr>
           <td>IT</td>
         </tr>
@@ -42,7 +47,55 @@
         </tr>
         <tr>
           <td>IG</td>
-        </tr>
+        </tr>-->
     </table>
+
+    <div>
+      <input type="submit" value="Submit info" class="infoSubmit">
+    </div>
+
+    <div class="resultsPara">
+      <p class="fullName"></p>
+      <p class="user"></p>
+      <p class="mail"></p>
+      <p class="dept"></p>
+      <p class="extension"></p>
+    </div>
+
+    <script>
+      var fullName = document.querySelector('.fullName');
+      var user = document.querySelector('.user');
+      var mail = document.querySelector('.mail');
+      var dept = document.querySelector('.dept');
+      var ext = document.querySelector('.ext');
+      //var lastName = document.querySelector('.lastName');
+
+      var infoSubmit = document.querySelector('.infoSubmit');
+      var first = document.querySelector('.firstField');
+      var last = document.querySelector('.lastField');
+      var userField = document.querySelector('.userField');
+      var emailField = document.querySelector('.emailField');
+      var deptField = document.querySelector('.deptField');
+      var extField = document.querySelector('.extField');
+
+
+      function saveInfo() {
+        //var fullName = (firstNameField.value + ' ' + lastNameField.value);
+        var extensionNum = Number(extField.value);
+
+        fullName.textContent = first.value + ' ' + last.value;
+        user.textContent = userField.value;
+        mail.textContent = emailField.value;
+        dept.textContent = deptField.value;
+        ext.value = extensionNum + '';
+
+        //firstField.value = '';
+        //lastField.value = '';
+      }
+
+      infoSubmit.addEventListener('click', saveInfo);
+
+      //JavaScript here
+    </script>
   </body>
 </html>
