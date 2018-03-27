@@ -67,7 +67,7 @@
       var user = document.querySelector('.user');
       var mail = document.querySelector('.mail');
       var dept = document.querySelector('.dept');
-      var ext = document.querySelector('.ext');
+      var extension = document.querySelector('.extension');
       //var lastName = document.querySelector('.lastName');
 
       var infoSubmit = document.querySelector('.infoSubmit');
@@ -83,18 +83,26 @@
         //var fullName = (firstNameField.value + ' ' + lastNameField.value);
         var extensionNum = Number(extField.value);
 
-        fullName.textContent = first.value + ' ' + last.value;
-        user.textContent = userField.value;
-        mail.textContent = emailField.value;
-        dept.textContent = deptField.value;
-        ext.value = extensionNum + '';
+        fullName.textContent = 'Name: ' + first.value + ' ' + last.value;
+        user.textContent = 'Username: ' + userField.value;
+        mail.textContent = 'Email Address: ' + emailField.value;
+        dept.textContent = 'Department: ' + deptField.value;
+        extension.textContent = 'Ext: ' + extField.value.toString();
 
-        //firstField.value = '';
-        //lastField.value = '';
+
+        blankForm();
       }
 
       infoSubmit.addEventListener('click', saveInfo);
 
+      function blankForm() {
+        firstField.value = '';
+        lastField.value = '';
+        userField.value = '';
+        emailField.value = '';
+        deptField.value = '';
+        extField.value = '';
+      }
       //JavaScript here
     </script>
   </body>

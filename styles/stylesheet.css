@@ -6,9 +6,10 @@ h1 {
 
 .resultsPara {
   font: sans-serif;
-  padding: 20px;
+  padding: 5px;
 }
 
 p {
-  padding: 20px;
+  font: sans-serif;
+  margin: 2px;
 }
